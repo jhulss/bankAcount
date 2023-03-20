@@ -8,4 +8,8 @@ describe("Romanos", () => {
   it("convierte 2 a romano", () => {
     expect(romanos.generar(2)).toEqual("II");
   });
+
+  it("convierte 3 a romano", () => {
+    expect(romanos.generar(3)).toEqual("III");
+  });
 });
