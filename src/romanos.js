@@ -1,12 +1,11 @@
 class Romanos {
   generar(num) {
-    if (num == 3) {
-      return "III";
+    let result = "";
+    while (num > 0) {
+      result += "I";
+      num -= 1;
     }
-    if (num == 2) {
-      return "II";
-    }
-    return "I";
+    return result;
   }
 }
 
