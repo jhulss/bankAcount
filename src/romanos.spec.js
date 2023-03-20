@@ -16,4 +16,8 @@ describe("Romanos", () => {
   it("convierte 4 a romano", () => {
     expect(romanos.generar(4)).toEqual("IV");
   });
+
+  it("convierte 5 a romano", () => {
+    expect(romanos.generar(5)).toEqual("V");
+  });
 });

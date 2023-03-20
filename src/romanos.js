@@ -1,6 +1,7 @@
 class Romanos {
   constructor() {
     this.equivalencias = [
+      { numero: 5, valor: "V" },
       { numero: 4, valor: "IV" },
       { numero: 1, valor: "I" },
     ];
