@@ -19,7 +19,16 @@ export class BankAccount {
   }
 
   deposit() {
-    throw new Error("Remove this statement and implement this function");
+    if (this.closed_account)
+    {
+      throw new Error("Error");
+    }else if (deposit < 0)
+    {
+      throw new Error("Error");
+    }
+    else {
+      this.money += deposit;
+    }
   }
 
   withdraw() {
