@@ -31,8 +31,21 @@ export class BankAccount {
     }
   }
 
-  withdraw() {
-    throw new Error("Remove this statement and implement this function");
+  withdraw(withdraww) {
+    if(this.closed_account){
+      throw new Error("Error");
+    }else if(withdraww < 0)
+    {
+      throw new Error("Error");
+    }else if(withdraww > this.money)
+    {
+      throw new Error("Error");
+    }
+    else{
+      this.money -= withdraww;
+    }
+    
+    
   }
 
   get balance() {
@@ -43,5 +56,6 @@ export class BankAccount {
 export class ValueError extends Error {
   constructor() {
     super("Bank account error");
+    this.name = "Error";
   }
 }
