@@ -7,14 +7,14 @@ describe("Bank Account", () => {
     expect(account.balance).toEqual(0);
   });
 
-  xit("can deposit money", () => {
+  it("can deposit money", () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
     expect(account.balance).toEqual(100);
   });
 
-  xit("can deposit money sequentially", () => {
+  it("can deposit money sequentially", () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -22,7 +22,7 @@ describe("Bank Account", () => {
     expect(account.balance).toEqual(150);
   });
 
-  xit("can withdraw money", () => {
+  it("can withdraw money", () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -30,7 +30,7 @@ describe("Bank Account", () => {
     expect(account.balance).toEqual(50);
   });
 
-  xit("can withdraw money sequentially", () => {
+  it("can withdraw money sequentially", () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -39,14 +39,14 @@ describe("Bank Account", () => {
     expect(account.balance).toEqual(0);
   });
 
-  xit("checking balance of closed account throws error", () => {
+  it("checking balance of closed account throws error", () => {
     const account = new BankAccount();
     account.open();
     account.close();
     expect(() => account.balance).toThrow(ValueError);
   });
 
-  xit("deposit into closed account throws error", () => {
+  it("deposit into closed account throws error", () => {
     const account = new BankAccount();
     account.open();
     account.close();
@@ -55,7 +55,7 @@ describe("Bank Account", () => {
     }).toThrow(ValueError);
   });
 
-  xit("withdraw from closed account throws error", () => {
+  it("withdraw from closed account throws error", () => {
     const account = new BankAccount();
     account.open();
     account.close();
@@ -79,7 +79,7 @@ describe("Bank Account", () => {
     }).toThrow(ValueError);
   });
 
-  xit("reopened account does not retain balance", () => {
+  it("reopened account does not retain balance", () => {
     const account = new BankAccount();
     account.open();
     account.deposit(50);
@@ -88,7 +88,7 @@ describe("Bank Account", () => {
     expect(account.balance).toEqual(0);
   });
 
-  xit("cannot withdraw more than deposited", () => {
+  it("cannot withdraw more than deposited", () => {
     const account = new BankAccount();
     account.open();
     account.deposit(25);
@@ -97,7 +97,7 @@ describe("Bank Account", () => {
     }).toThrow(ValueError);
   });
 
-  xit("cannot withdraw negative amount", () => {
+  it("cannot withdraw negative amount", () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -114,7 +114,7 @@ describe("Bank Account", () => {
     }).toThrow(ValueError);
   });
 
-  xit("changing balance directly throws error", () => {
+  it("changing balance directly throws error", () => {
     const account = new BankAccount();
     account.open();
     expect(() => {

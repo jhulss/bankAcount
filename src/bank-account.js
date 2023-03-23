@@ -5,15 +5,17 @@
 
 export class BankAccount {
   constructor() {
-    throw new Error("Remove this statement and implement this function");
+    this.money = 0;
+    this.closed_account = false;
   }
 
   open() {
-    throw new Error("Remove this statement and implement this function");
+    //throw new Error("Remove this statement and implement this function");
   }
 
   close() {
-    throw new Error("Remove this statement and implement this function");
+    this.money = 0;
+    this.closed_account = true;
   }
 
   deposit() {
