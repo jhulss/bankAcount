@@ -10,7 +10,7 @@ export class BankAccount {
   }
 
   open() {
-    //throw new Error("Remove this statement and implement this function");
+    //throw new Error("Error");
   }
 
   close() {
@@ -49,7 +49,7 @@ export class BankAccount {
   }
 
   get balance() {
-    throw new Error("Remove this statement and implement this function");
+    //throw new Error("Error");
   }
 }
 
